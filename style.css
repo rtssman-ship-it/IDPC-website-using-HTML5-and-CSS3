@@ -1,0 +1,686 @@
+@font-face {
+    font-family: "Metropolis";
+    src: url(font/metropolis/Metropolis-Regular.otf) format(opentype);
+}
+@font-face {
+    font-family: "Metropolis-Black";
+    src: url(font/metropolis/Metropolis-Black.otf) format(opentype);
+}
+@font-face {
+    font-family: "Metropolis-Bold";
+    src: url(font/metropolis/Metropolis-Bold.otf)format(opentype);
+}
+@font-face {
+    font-family: "Metropolis-SemiBold";
+    src: url(font/metropolis/Metropolis-SemiBold.otf)format(opentype);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-pink:#ED017F;
+    --text-white:#fff;
+    --text-black:#000;
+    --heading-black:#010101;
+    --text-gray:#676767;
+    --font-family: "Metropolis";
+    --text-light-gray:#999999;
+    --text-deep-gray:#363940;
+    --background-color:#FEF9FC;
+    --heading-color:#343434;
+    --line-color:#CCCCCC;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    display: block;
+}
+body{
+    font-family: "Metropolis";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.container{
+    max-width: 1398px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col40{
+    max-width: 40%;
+    flex: 0 0 40%;
+    padding: 0 15px;
+}
+.col60{
+    max-width: 60%;
+    flex: 0 0 60%;
+    padding: 0 15px;
+}
+.col25{
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding: 0 15px;
+}
+.col20{
+    max-width: 20%;
+    flex: 0 0 20%;
+    padding: 0 15px;
+}
+h1{
+    font-family: "Metropolis-Black";
+    font-size: 57px;
+    line-height: 1.19;
+    font-weight: 900;
+    color: var(--heading-black);
+}
+h2, .h2-title{
+    font-size: 40px;
+    font-family: "Metropolis-Bold";
+    line-height: 1.075;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+h3, .h3-title{
+    font-size: 36px;
+    font-family: "Metropolis-Bold";
+    line-height: 1.19;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+h4, .h4-title{
+    font-size: 22px;
+    font-family: "Metropolis";
+    line-height: 1;
+    font-weight: bold;
+    color: var(--text-deep-gray);
+    text-transform: capitalize;
+}
+.sub-text{
+    font-family: "Metropolis";
+    font-size: 16px;
+    line-height: 1.37;
+    font-weight: 500;
+    color: var(--text-light-gray);
+}
+.cmn-gap{
+    padding: 100px 0;
+}
+/* Header Section */
+.header{
+    position: relative;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand a{
+    display: block;
+    max-width: 175px;
+}
+.navbar-links{
+    margin: 0 auto;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li a{
+    position: relative;
+    display: block;
+    padding: 0 22px;
+    color: var(--text-black);
+    text-transform: uppercase;
+    font-family: "Metropolis";
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    transition: 0.5s ease all;
+}
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    background: var(--main-pink);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -15px;
+    transition: 0.5s ease all;
+}
+.nav-links li a:hover{
+    color: var(--main-pink);
+}
+.nav-links li a:hover::after{
+    width: 100%;
+    color: var(--main-pink);
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    color: var(--main-pink);
+    cursor: pointer;
+    margin-right: 31px;
+}
+.icon:hover{
+    color: var(--text-black);
+}
+.cmn-btn{
+    display: inline-block;
+    background-color: var(--main-pink);
+    color: var(--text-white);
+    text-transform: uppercase;
+    padding: 17px 31px;
+    border-radius: 4px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    transition: 0.5s ease all;
+}
+.cmn-btn:hover{
+    background: var(--text-black);
+}
+.cmn-btn-style{
+    text-transform: lowercase;
+}
+.hamburger{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Hero Section */
+
+.hero-content-text{
+    padding: 60px 0;
+}
+.hero-content-text h1{
+    max-width: 435px;
+}
+.hero-content-text .sub-text{
+    margin: 43px 0;
+    max-width: 391.74px;
+    color: var(--text-gray);
+}
+.header-btn{
+    background-color: transparent;
+    border: 1px solid var(--main-pink);
+    border-radius: 4px;
+    margin-left: 10px;
+    color: var(--main-pink);
+}
+.link{
+    display: flex;
+    flex-wrap: wrap;
+}
+.link img{
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+}
+.link p{
+    font-family: "Metropolis";
+    font-size: 17px;
+    line-height: 1.29;
+    font-weight: 800;
+}
+.line{
+    border: 1px solid var(--line-color);
+    max-width: 24px;
+    align-items: center;
+    margin: 0 27px;
+}
+.social-icon{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.social-icon li a{
+    display: inline-block;
+    /* width: 24px;
+    height: 24px; */
+    margin-right: 24px;
+    transition: 0.5s ease all;
+}
+.social-icon li a:hover{
+    transform: scale(1.4);
+}
+.facebook_color{
+    color: #4B7FCD;
+}
+.youtube_color{
+    color: #FF0000;
+}
+.linkedin_color{
+    color: #4A71FB;
+}
+.instagram_color{
+    color: #ED017F;
+}
+.col60-image{
+    position: relative;
+    max-width: 905px;
+}
+.col60-tag{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background: var(--text-white);
+    border-radius: 55px;
+    padding: 27px;
+    z-index: 999;
+    box-shadow: 4px 4px 58px rgb(0,0,0,0.12);
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Metropolis-Bold";
+    color: var(--heading-color);
+    font-weight: bold;
+    line-height: 1.22;
+    transition: 0.5s ease all;
+}
+.col60-tag img{
+    margin-right: 23px;
+}
+.col60-tag:hover{
+    background: var(--text-black);
+    color: var(--text-white);
+    transform: scale(1.2);
+}
+.position{
+    top: 30px;
+    left: 10px;
+}
+.position1{
+    top: 120px;
+    right: 10px;
+}
+
+/* Customer Experience */
+
+.exp-heading , .service-heading, .result-heading{
+    text-align: center;
+}
+.exp-heading .sub-text{
+    max-width: 622.42px;
+    margin: 28px auto;
+}
+.exp-table{
+    padding: 65px 0;
+}
+.exp-gap{
+    margin: 0 53px;
+}
+.exp-content-card{
+    max-width: 259px;
+    padding: 24px;
+    /* margin-right: 106px; */
+}
+.exp-gap:nth-child(4n) {
+    margin: 0 0;
+}
+.exp-content-card img{
+    margin-bottom: 18px;
+}
+.exp-content-card p{
+    max-width: 160px;
+    margin: 24px 0;
+    /* font-size: 14px;
+    font-family: "Metropolis";
+    line-height: 1.5;
+    font-weight: 400; */
+    color: var(--text-light-gray);
+}
+
+/* Our Service */
+
+.service{
+    background: var(--background-color);
+}
+.service-heading .sub-text{
+    max-width: 792px;
+    margin: 28px auto;
+    color: var(--text-light-gray);
+}
+.service-table{
+    padding: 68px 0;
+}
+.service-card{
+    max-width: 254px;
+    margin-right: 116px;
+}
+.service-card:last-child{
+    margin-right: 0;
+}
+.service-table img{
+    object-fit: contain;
+}
+.service-text{
+    max-width: 254px;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+.service-text p{
+    max-width: 195px;
+    color: var(--text-deep-gray);
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 1.66;
+    font-family: "Metropolis-SemiBold";
+    letter-spacing: 1px;
+}
+.service-text img{
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+.service-text img:hover{
+    transform: scale(1.4);
+}
+/* Our Best Result */
+
+.result-heading .sub-text{
+    max-width: 520.6px;
+    margin: 28px auto;
+    color: var(--text-light-gray);
+}
+.result-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 94px 0;
+}
+.result-card{
+    /* max-width: 172px; */
+    margin-bottom: 55px;
+    margin-right: 113px;
+}
+.result-card:nth-child(4n) {
+    margin-right: 0;
+}
+.color{
+    color: var(--main-pink);
+}
+.result-card p{
+    /* max-width: 172px; */
+    font-family: "Metropolis";
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.56;
+    letter-spacing: 1px;
+    color: var( --text-gray);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+/* Footer Section */
+
+.footer{
+    padding: 87px 0;
+}
+.footer-heading{
+    font-family: "Metropolis-SemiBold";
+    font-size: 18px;
+    line-height: 1.22;
+    color: var(--heading-black);
+}
+.footer-text{
+    max-width: 180px;
+    font-family: "Metropolis";
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--text-gray);
+    text-transform: capitalize;
+    margin: 27px 0 45px 0;
+
+}
+.footer-links{
+    max-width: 140px;
+    margin-top: 30px;
+}
+.footer-links li a{
+    display: inline-block;
+    font-family: "Metropolis";
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--text-gray);
+    text-transform: capitalize;
+    margin-bottom: 23px;
+    transition: 0.5s ease all;
+}
+.footer-links li a:hover{
+    color: var(--main-pink);
+    transform: scale(1.2);
+}
+.center{
+    /* max-width: 98.61px; */
+    margin: 130px 0;
+}
+
+@media (max-width:1200px){ 
+.brand a{
+    display: block;
+    max-width: 175px;
+}
+.nav-links li a{
+    padding: 0 20px;
+  }
+.header-btn{
+    margin-left: 5px;
+}
+  /* reduce big margins */
+  .col20{
+    margin-right: 60px;
+}
+.col20{
+    margin-right: 0;
+}
+}
+
+@media (max-width:992px){
+.brand a{
+    max-width: 300px;
+    margin-right: 10px;
+}
+.hamburger{
+    display: flex;
+    right: 30%;
+}
+.nav-links{
+    display: none;
+}
+.icon{
+    display: none;
+}
+  /* banner stack */
+.col40{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.hero-content-text h1{
+    max-width: 100%;
+    display: inline-block;
+  }
+  .hero-content-text .sub-text{
+    max-width: 100%;
+    text-align: center;
+  }
+.link{
+    justify-content: center;
+    align-items: center;
+  }
+  .col60{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 40px;
+  } 
+  .col60-tag:hover{
+    background: var(--text-black);
+    color: var(--text-white);
+    transform: none;
+}
+  /* fix big spacing */
+  .exp-content-card{
+    margin-right: 0;
+  }
+ 
+  /* service cards */
+  .service-text{
+    flex-wrap:nowrap;
+  }
+
+  /* result section */
+  .result-card{
+    margin-right: 0;
+  }
+  /* footer spacing fix */
+  .col20{
+    margin-right: 0;
+}
+}
+
+
+@media (max-width:576px){
+.brand{
+    max-width: 230px;
+    margin-right: 10px;
+}
+.nav-bar{
+    flex-wrap: nowrap;
+}
+.hamburger{
+    display: flex;
+    width: 34px;
+    height: 34px;
+    right: 36%;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+.nav-links{
+    display: none;
+}
+
+ /* columns full width */
+  .col40,
+  .col60,
+  .col25,
+  .col20{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+ 
+  /* navbar */
+  .brand{
+    max-width: 120px;
+}
+ .cmn-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+  /* banner */
+  .col40{
+    margin: 40px 0;
+    text-align: center;
+  }
+ 
+  .col60{
+    margin-top: 20px;
+}
+  .col60-tag {
+    position: static;
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .col60-tag:hover{
+    background: var(--text-black);
+    color: var(--text-white);
+    transform: none;
+}
+  /* customer cards */
+  .col25 {
+    max-width: 48%;
+    flex: 0 0 48%;
+    margin: 20px 2px;
+    }
+ .exp-gap{
+    margin: 0;
+ }
+  .exp-content-card{
+    margin-right: 0;
+    padding: 15px;
+  }
+ 
+  /* service cards */
+  .service-card{
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 20px 0;
+  }
+ 
+  /* footer */
+  .col20{
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .center{
+    max-width: 100%;
+    display: flex;
+    margin-left: 0;
+  }
+}
+@media (max-width:320px){
+    .hamburger{
+        max-width: 100%;
+        left: 80%;
+    }
+    .icon{
+        display: none;
+    }
+    .nav-bar .cmn-btn{
+        display: none;
+    }
+    /* columns full width */
+  .col40,
+  .col60,
+  .col25,
+  .col20{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.header-btn{
+    margin-top: 10px;
+}
+.exp-content-card .col25{
+   max-width: 100%;
+}
+}
+ 
+
